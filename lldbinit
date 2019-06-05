@@ -1,0 +1,7 @@
+command script import ~/lldb/lldb_commands/dslldb.py
+command script import /usr/local/opt/chisel/libexec/fblldb.py
+
+command regex dump_stuff "s/(.+)/image lookup -rn '\+\[\w+(\(\w+\))?\ \w+\]$' %1 /"
+
+settings set target.x86-disassembly-flavor intel
+settings set target.skip-prologue false
